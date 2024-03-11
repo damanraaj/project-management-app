@@ -2,7 +2,7 @@ import React from "react";
 import noProjectImage from "../assets/no-projects.png";
 import Button from "./ui/Button";
 
-const NoProjectSelected = () => {
+const NoProjectSelected = ({ onStartAdd }) => {
   return (
     <div className="mt-24 text-center w-2/3">
       <img
@@ -17,7 +17,7 @@ const NoProjectSelected = () => {
         Select a project from the sidebar to get started or create a new one
       </p>
       <p className="mt-8">
-        <Button>Create new project</Button>
+        <Button onClick={onStartAdd}>Create new project</Button>
       </p>
     </div>
   );
