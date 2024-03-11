@@ -12,7 +12,11 @@ const ProjectsSideBar = ({ onStartAdd, projectList }) => {
       </div>
       {(projectList &&
         projectList.map((project) => (
-          <li key={project.id}>{project.name}</li>
+          <ul key={project.id} className="mt-8">
+            <button className="w-full text-left px-2 py-1 rounded-sm my-1 hover:text-stone-200 hover:bg-stone-800">
+              {project.name}
+            </button>
+          </ul>
         ))) || <ul></ul>}
     </aside>
   );
