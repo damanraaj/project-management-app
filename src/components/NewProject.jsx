@@ -7,6 +7,7 @@ const NewProject = ({ onCancel, onSave }) => {
   const duedateRef = useRef();
   const handleOnSave = () => {
     const newproject = {
+      id: Math.random(),
       name: titleRef.current.value,
       descriptions: descriptionRef.current.value,
       duedate: duedateRef.current.value,

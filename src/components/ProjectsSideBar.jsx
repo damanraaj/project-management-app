@@ -10,9 +10,10 @@ const ProjectsSideBar = ({ onStartAdd, projectList }) => {
       <div>
         <Button onClick={onStartAdd}>+ Add project</Button>
       </div>
-      {(projectList && projectList.map((project) => <li>{project}</li>)) || (
-        <ul></ul>
-      )}
+      {(projectList &&
+        projectList.map((project) => (
+          <li key={project.id}>{project.name}</li>
+        ))) || <ul></ul>}
     </aside>
   );
 };
