@@ -36,7 +36,7 @@ const NewProject = ({ onCancel, onSave }) => {
       </menu>
       <div>
         <Input label={"Project Name"} ref={titleRef} id={"title"} />
-        <Input label={"Due Date"} ref={duedateRef} id={"duedate"} />
+        <Input type="date" label={"Due Date"} ref={duedateRef} id={"duedate"} />
         <Input label={"Description"} ref={descriptionRef} textArea />
       </div>
     </div>
