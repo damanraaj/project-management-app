@@ -44,6 +44,16 @@ function App() {
       };
     });
   };
+
+  const handleDeleteProject = (projectid) => {
+    setProjects((prevState) => {
+      return {
+        ...prevState,
+        projectList: prevState.projectList.filter((p) => p.id !== projectid),
+        selected: false,
+      };
+    });
+  };
   return (
     <main className="h-screen my-8 flex gap-8">
       <ProjectsSideBar
@@ -64,6 +74,7 @@ function App() {
       {projects.selected && projects.selected !== "new" && (
         <ProjectDetails
           project={projects.projectList.find((p) => p.id === projects.selected)}
+          onDelete={handleDeleteProject}
         />
       )}
     </main>

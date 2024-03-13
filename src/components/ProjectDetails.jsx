@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProjectDetails = ({ project }) => {
+const ProjectDetails = ({ project, onDelete }) => {
   const fmtDate = new Date(project.duedate).toLocaleString("en-in", {
     day: "numeric",
     month: "short",
@@ -11,7 +11,10 @@ const ProjectDetails = ({ project }) => {
       <header className="pb-4 mb-4 border-b-2 border-stone-300">
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-bold text-stone-600">{project.name}</h1>
-          <button className="text-stone-600 hover:text-stone-950">
+          <button
+            className="text-stone-600 hover:text-stone-950"
+            onClick={onDelete.bind(null, project.id)}
+          >
             Delete
           </button>
         </div>
