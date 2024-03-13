@@ -92,6 +92,7 @@ function App() {
         <ProjectDetails
           project={projects.projectList.find((p) => p.id === projects.selected)}
           onDelete={handleDeleteProject}
+          onAddTask={handleAddTask}
         />
       )}
     </main>
