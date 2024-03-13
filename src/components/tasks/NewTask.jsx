@@ -10,7 +10,10 @@ const NewTask = ({ onAddTask }) => {
         ref={taskRef}
       />
       <button
-        onClick={() => onAddTask(taskRef.current.value)}
+        onClick={() => {
+          onAddTask(taskRef.current.value);
+          taskRef.current.value = "";
+        }}
         className="text-stone-700 hover:text-stone-950"
       >
         Add Task
