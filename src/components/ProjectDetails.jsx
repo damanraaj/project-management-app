@@ -1,9 +1,9 @@
 import React from "react";
 
 const ProjectDetails = ({ project }) => {
-  const fmtDate = new Date(project.duedate).toLocaleString("en-US", {
+  const fmtDate = new Date(project.duedate).toLocaleString("en-in", {
     day: "numeric",
-    month: "long",
+    month: "short",
     year: "numeric",
   });
   return (
