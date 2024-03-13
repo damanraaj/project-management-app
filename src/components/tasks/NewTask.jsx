@@ -11,6 +11,7 @@ const NewTask = ({ onAddTask }) => {
       />
       <button
         onClick={() => {
+          if (taskRef.current.value.trim() === "") return;
           onAddTask({ text: taskRef.current.value, id: Math.random() });
           taskRef.current.value = "";
         }}
