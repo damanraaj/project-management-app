@@ -11,7 +11,7 @@ const NewTask = ({ onAddTask }) => {
       />
       <button
         onClick={() => {
-          onAddTask(taskRef.current.value);
+          onAddTask({ text: taskRef.current.value, id: Math.random() });
           taskRef.current.value = "";
         }}
         className="text-stone-700 hover:text-stone-950"
