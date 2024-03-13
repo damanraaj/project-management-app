@@ -21,7 +21,7 @@ const Tasks = ({ tasks, onAddTask, onDeleteTask }) => {
           ))}
         </ul>
       )}
-      {!tasks && (
+      {tasks.length === 0 && (
         <p className="text-stone-800 my-4">
           This project does not have any tasks yet
         </p>
