@@ -50,6 +50,7 @@ function App() {
         onStartAdd={handleShowNewProject}
         onSelectProject={handleSelectProject}
         projectList={projects.projectList}
+        selectedProject={projects.selected}
       />
       {!projects.selected && (
         <NoProjectSelected onStartAdd={handleShowNewProject} />
