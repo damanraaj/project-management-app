@@ -45,6 +45,23 @@ function App() {
     });
   };
 
+  const handleAddTask = (task) => {
+    setProjects((prevState) => {
+      return {
+        ...prevState,
+        projectList: prevState.projectList.map((p) => {
+          if (p.id !== prevState.selected) {
+            return p;
+          }
+          return {
+            ...p,
+            tasks: [...p.tasks, task],
+          };
+        }),
+      };
+    });
+  };
+
   const handleDeleteProject = (projectid) => {
     setProjects((prevState) => {
       return {
