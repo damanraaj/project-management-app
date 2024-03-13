@@ -6,11 +6,18 @@ const NewProject = ({ onCancel, onSave }) => {
   const descriptionRef = useRef();
   const duedateRef = useRef();
   const handleOnSave = () => {
+    const title = titleRef.current.value.trim();
+    const description = descriptionRef.current.value.trim();
+    const duedate = duedateRef.current.value.trim();
+    if (!title || !description || !duedate) {
+      alert("Please fill all inputs");
+      return;
+    }
     const newproject = {
       id: Math.random(),
-      name: titleRef.current.value,
-      description: descriptionRef.current.value,
-      duedate: duedateRef.current.value,
+      name: title,
+      description,
+      duedate,
     };
     onSave(newproject);
   };
