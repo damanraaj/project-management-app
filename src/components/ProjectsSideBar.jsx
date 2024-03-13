@@ -14,7 +14,7 @@ const ProjectsSideBar = ({ onSelectProject, onStartAdd, projectList }) => {
         projectList.map((project) => (
           <ul key={project.id} className="mt-8">
             <button
-              onClick={onSelectProject.bind(null, project)}
+              onClick={onSelectProject.bind(null, project.id)}
               className="w-full text-left px-2 py-1 rounded-sm my-1 hover:text-stone-200 hover:bg-stone-800"
             >
               {project.name}

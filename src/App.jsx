@@ -36,11 +36,11 @@ function App() {
     });
   };
 
-  const handleSelectProject = (project) => {
+  const handleSelectProject = (projectid) => {
     setProjects((prevState) => {
       return {
         ...prevState,
-        selected: project,
+        selected: projectid,
       };
     });
   };
@@ -61,7 +61,9 @@ function App() {
         />
       )}
       {projects.selected && projects.selected !== "new" && (
-        <ProjectDetails project={projects.projectList[0]} />
+        <ProjectDetails
+          project={projects.projectList.find((p) => p.id === projects.selected)}
+        />
       )}
     </main>
   );
