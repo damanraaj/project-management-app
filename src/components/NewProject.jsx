@@ -9,7 +9,7 @@ const NewProject = ({ onCancel, onSave }) => {
     const newproject = {
       id: Math.random(),
       name: titleRef.current.value,
-      descriptions: descriptionRef.current.value,
+      description: descriptionRef.current.value,
       duedate: duedateRef.current.value,
     };
     onSave(newproject);
